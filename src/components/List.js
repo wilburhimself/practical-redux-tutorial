@@ -9,7 +9,7 @@ const ConnectedList = ({ expenses }) => (
   <ul className="list-group list-group-flush">
     {expenses.map(el => (
       <li className="list-group-item" key={el.id}>
-        {el.id} - {el.amount}
+        {el.title} - {el.amount}
       </li>
     ))}
   </ul>
