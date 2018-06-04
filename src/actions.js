@@ -1,5 +1,4 @@
-export const ADD_EXPENSE = 'ADD_EXPENSE'
-export const REMOVE_EXPENSE = 'REMOVE_EXPENSE'
+import { ADD_EXPENSE, REMOVE_EXPENSE } from './constants/action-types'
 
 export const addExpense = expense => ({
   type: ADD_EXPENSE,

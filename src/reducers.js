@@ -1,4 +1,4 @@
-import {ADD_EXPENSE, REMOVE_EXPENSE} from './actions'
+import {ADD_EXPENSE, REMOVE_EXPENSE} from './constants/action-types'
 
 export default expenses
 
