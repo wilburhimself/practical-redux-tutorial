@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import uuidv1 from 'uuid'
+import { Field, reduxForm } from 'redux-form'
 import { addExpense } from '../actions'
 
 const mapDispatchToProps = dispatch => {
@@ -10,8 +11,8 @@ const mapDispatchToProps = dispatch => {
 }
 
 class ConnectedForm extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     this.state = {
       title: '',
