@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import uuidv1 from 'uuid'
-import { Field, reduxForm } from 'redux-form'
-import { addExpense } from '../actions'
+// import { Field, reduxForm } from 'redux-form'
+import { addExpense } from '../expenses/actions'
 
 const mapDispatchToProps = dispatch => {
   return {
