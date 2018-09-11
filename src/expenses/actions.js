@@ -1,11 +1,6 @@
-import { ADD_EXPENSE, REMOVE_EXPENSE } from './constants'
+import * as constants from './constants'
 
-export const addExpense = expense => ({
-  type: ADD_EXPENSE,
-  expense
-})
-
-export const removeExpense = expense => ({
-  type: REMOVE_EXPENSE,
-  expense
-})
+export const fetchExpenses = payload => ({ payload, type: constants.FETCH_EXPENSES})
+export const fetchExpensesSuccess = payload => ({ payload, type: constants.FETCH_EXPENSES_SUCCESS })
+export const addExpense = payload => ({ payload, type: constants.ADD_EXPENSE })
+export const removeExpense = payload => ({ payload, type: constants.REMOVE_EXPENSE })

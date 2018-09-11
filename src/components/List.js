@@ -1,9 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { removeExpense } from '../expenses/actions'
+import { removeExpense, fetchExpenses } from '../expenses/actions'
 
 const mapDispatchToProps = dispatch => {
   return {
+    fetchExpenses: () => dispatch(fetchExpenses()),
     removeExpense: expense => dispatch(removeExpense(expense))
   }
 }
@@ -22,6 +23,10 @@ class ConnectedList extends React.Component {
 
   removeExpense (expense) {
     this.props.removeExpense(expense)
+  }
+
+  componentDidMount () {
+    this.props.fetchExpenses()
   }
 
   render () {

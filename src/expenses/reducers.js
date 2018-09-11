@@ -1,4 +1,4 @@
-import {ADD_EXPENSE, REMOVE_EXPENSE} from './constants'
+import * as constants from './constants'
 
 export default expenses
 
@@ -9,12 +9,23 @@ export const initialState = {
 
 function expenses(state = initialState, action = {}) {
   switch (action.type) {
-    case ADD_EXPENSE:
-      return addExpense(state, action.expense)
-    case REMOVE_EXPENSE:
-      return removeExpense(state, action.expense)
+    case constants.FETCH_EXPENSES_SUCCESS:
+      console.log(action)
+      return fetchExpenses(state, action.payload)
+    case constants.ADD_EXPENSE:
+      return addExpense(state, action.payload)
+    case constants.REMOVE_EXPENSE:
+      return removeExpense(state, action.payload)
     default:
       return state
+  }
+}
+
+function fetchExpenses(state, payload) {
+  console.log(payload)
+  return {
+    ...state,
+    expenses: [payload]
   }
 }
 
